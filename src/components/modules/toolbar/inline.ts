@@ -379,7 +379,7 @@ export default class InlineToolbar extends Module<InlineToolbarNodes> {
      */
     const tagsConflictsWithSelection = ['IMG', 'INPUT'];
     const currentSelection = SelectionUtils.get();
-    const selectedText = SelectionUtils.text;
+    // const selectedText = SelectionUtils.text;
 
     // old browsers
     if (!currentSelection || !currentSelection.anchorNode) {
@@ -387,7 +387,7 @@ export default class InlineToolbar extends Module<InlineToolbarNodes> {
     }
 
     // empty selection
-    if (currentSelection.isCollapsed || selectedText.length < 1) {
+    if (currentSelection.isCollapsed) {
       return false;
     }
 
